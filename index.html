@@ -27,21 +27,21 @@
     }
     .separator {
         border-top: 1px solid black;
-        margin: 0 auto 20px;
+        margin: 0 auto 30px; /* more spacing below the line */
         width: calc(100% - 2cm);
     }
     .authors {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
+        gap: 12px; /* more space between names */
         max-width: 900px;
-        margin: 0 auto;
+        margin: 0 auto 20px; /* more space below authors */
         line-height: 1.5;
         padding: 0 10px;
     }
     .author {
-        white-space: nowrap; /* keep first and last name together */
+        white-space: nowrap;
     }
     .authors a {
         text-decoration: none;
@@ -54,15 +54,15 @@
     }
     .affiliations {
         margin-top: 10px;
+        margin-bottom: 25px; /* more space before links */
         padding: 0 10px;
         font-size: 0.95rem;
     }
     .links {
-        margin-top: 15px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 25px; /* more gap between icons */
         padding: 0 10px;
     }
     .link-item {
@@ -71,8 +71,8 @@
         text-align: left;
     }
     .link-item img {
-        height: 20px;
-        margin-right: 5px;
+        height: 22px;
+        margin-right: 6px;
     }
 
     /* Responsive adjustments */
@@ -121,11 +121,11 @@
     
     <div class="links">
         <div class="link-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Paper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Document_icon_(black).svg" alt="Paper">
             <a href="https://arxiv.org/" target="_blank">Paper (arXiv)</a>
         </div>
         <div class="link-item">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Code">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Code">
             <a href="https://github.com/" target="_blank">Code (coming soon)</a>
         </div>
     </div>
