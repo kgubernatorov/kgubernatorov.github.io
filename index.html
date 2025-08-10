@@ -1,134 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>anywhereVLA</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    .header {
-        background-color: #f0f0f0; /* light grey */
-        text-align: center;
-        padding: 20px;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #f0f0f0; /* light grey */
+    text-align: center;
+    padding: 20px;
+  }
+  .header h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .header h2 {
+    font-weight: bold;
+    margin: 10px 0 20px;
+    font-size: 1.4rem;
+  }
+  .separator {
+    border-top: 1px solid black;
+    margin: 0 auto 40px; /* bigger margin after line */
+    width: calc(100% - 2cm);
+  }
+  .authors {
+    max-width: 900px;
+    margin: 0 auto 35px; /* space below authors */
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+  /* Make authors break into two lines with normal spaces */
+  .authors span {
+    white-space: nowrap;
+    margin-right: 8px;
+  }
+  .authors a {
+    text-decoration: none;
+    color: black;
+  }
+  /* Wrap authors naturally, splitting into lines at commas */
+  .authors-container {
+    display: inline-block;
+    text-align: center;
+  }
+  sup {
+    font-size: 0.7em;
+    vertical-align: super;
+    margin-left: 1px;
+  }
+  .affiliations {
+    margin-bottom: 40px; /* bigger space before links */
+    font-size: 0.95rem;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 10px;
+  }
+  .link-item {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+  }
+  .link-item svg {
+    height: 22px;
+    width: 22px;
+    margin-right: 6px;
+    fill: black;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
     .header h1 {
-        font-weight: bold;
-        margin: 0;
-        font-size: 1.8rem;
+      font-size: 1.4rem;
     }
     .header h2 {
-        font-weight: bold;
-        margin: 10px 0 20px;
-        font-size: 1.4rem;
+      font-size: 1.2rem;
     }
-    .separator {
-        border-top: 1px solid black;
-        margin: 0 auto 30px; /* more spacing below the line */
-        width: calc(100% - 2cm);
-    }
-    .authors {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px; /* more space between names */
-        max-width: 900px;
-        margin: 0 auto 20px; /* more space below authors */
-        line-height: 1.5;
-        padding: 0 10px;
-    }
-    .author {
-        white-space: nowrap;
-    }
-    .authors a {
-        text-decoration: none;
-        color: black;
-    }
-    sup {
-        font-size: 0.7em;
-        vertical-align: super;
-        margin-left: 1px;
-    }
-    .affiliations {
-        margin-top: 10px;
-        margin-bottom: 25px; /* more space before links */
-        padding: 0 10px;
-        font-size: 0.95rem;
-    }
-    .links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px; /* more gap between icons */
-        padding: 0 10px;
+    .authors span {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 5px;
     }
     .link-item {
-        display: inline-flex;
-        align-items: center;
-        text-align: left;
+      justify-content: center;
+      width: 100%;
     }
-    .link-item img {
-        height: 22px;
-        margin-right: 6px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        .header h1 {
-            font-size: 1.4rem;
-        }
-        .header h2 {
-            font-size: 1.2rem;
-        }
-        .author {
-            flex-basis: 100%;
-            text-align: center;
-        }
-        .link-item {
-            justify-content: center;
-            width: 100%;
-        }
-    }
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>anywhereVLA: End-to-End Mobile Manipulation via Environment Exploration and Vision-Language-Action Model</h1>
-    <h2>ICRA 2026</h2>
-    
-    <div class="separator"></div>
-    
-    <div class="authors">
-        <span class="author"><a href="#">Konstantin Gubernatorov<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Roman Voronov<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Artem Voronov<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Sergei Pasynkov<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Dmitriy Novichkov<sup>2</sup></a>,</span>
-        <span class="author"><a href="#">Stepan Perminov<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Muhammad Haris Khan<sup>1</sup></a>,</span>
-        <span class="author"><a href="#">Ziang Guo<sup>1</sup></a>,</span>
-        <span class="author">and <a href="#">Dzmitry Tsetserukou<sup>1</sup></a></span>
+  <h1>anywhereVLA: End-to-End Mobile Manipulation via Environment Exploration and Vision-Language-Action Model</h1>
+  <h2>ICRA 2026</h2>
+
+  <div class="separator"></div>
+
+  <div class="authors authors-container">
+    <!-- First line of authors -->
+    <span><a href="#">Konstantin Gubernatorov<sup>1</sup></a>,</span>
+    <span><a href="#">Roman Voronov<sup>1</sup></a>,</span>
+    <span><a href="#">Artem Voronov<sup>1</sup></a>,</span>
+    <span><a href="#">Sergei Pasynkov<sup>1</sup></a>,</span>
+    <span><a href="#">Dmitriy Novichkov<sup>2</sup></a>,</span>
+    <br />
+    <!-- Second line of authors -->
+    <span><a href="#">Stepan Perminov<sup>1</sup></a>,</span>
+    <span><a href="#">Muhammad Haris Khan<sup>1</sup></a>,</span>
+    <span><a href="#">Ziang Guo<sup>1</sup></a>,</span>
+    <span>and <a href="#">Dzmitry Tsetserukou<sup>1</sup></a></span>
+  </div>
+
+  <div class="affiliations">
+    <sup>1</sup>Skolkovo Institute of Science and Technology &nbsp;&nbsp;
+    <sup>2</sup>ITMO
+  </div>
+
+  <div class="links">
+    <div class="link-item">
+      <!-- Inline simple black document icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM13 3.5V8h4.5L13 3.5zM8 11h8v2H8v-2zm0 4h8v2H8v-2z"/>
+      </svg>
+      <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">Paper (arXiv)</a>
     </div>
-    
-    <div class="affiliations">
-        <sup>1</sup>Skolkovo Institute of Science and Technology &nbsp;&nbsp;
-        <sup>2</sup>ITMO
+    <div class="link-item">
+      <!-- Inline black GitHub Octocat icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.53 7.53 0 0 1 2.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Code (coming soon)</a>
     </div>
-    
-    <div class="links">
-        <div class="link-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Document_icon_(black).svg" alt="Paper">
-            <a href="https://arxiv.org/" target="_blank">Paper (arXiv)</a>
-        </div>
-        <div class="link-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Code">
-            <a href="https://github.com/" target="_blank">Code (coming soon)</a>
-        </div>
-    </div>
+  </div>
 </div>
 
 </body>
