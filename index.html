@@ -1,1 +1,135 @@
-<h1>anywhereVLA</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>anywhereVLA</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #f0f0f0; /* light grey */
+        text-align: center;
+        padding: 20px;
+    }
+    .header h1 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    .header h2 {
+        font-weight: bold;
+        margin: 10px 0 20px;
+        font-size: 1.4rem;
+    }
+    .separator {
+        border-top: 1px solid black;
+        margin: 0 auto 20px;
+        width: calc(100% - 2cm);
+    }
+    .authors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    .author {
+        white-space: nowrap; /* keep first and last name together */
+    }
+    .authors a {
+        text-decoration: none;
+        color: black;
+    }
+    sup {
+        font-size: 0.7em;
+        vertical-align: super;
+        margin-left: 1px;
+    }
+    .affiliations {
+        margin-top: 10px;
+        padding: 0 10px;
+        font-size: 0.95rem;
+    }
+    .links {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .link-item {
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+    }
+    .link-item img {
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .header h1 {
+            font-size: 1.4rem;
+        }
+        .header h2 {
+            font-size: 1.2rem;
+        }
+        .author {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .link-item {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>anywhereVLA: End-to-End Mobile Manipulation via Environment Exploration and Vision-Language-Action Model</h1>
+    <h2>ICRA 2026</h2>
+    
+    <div class="separator"></div>
+    
+    <div class="authors">
+        <span class="author"><a href="#">Konstantin Gubernatorov<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Roman Voronov<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Artem Voronov<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Sergei Pasynkov<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Dmitriy Novichkov<sup>2</sup></a>,</span>
+        <span class="author"><a href="#">Stepan Perminov<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Muhammad Haris Khan<sup>1</sup></a>,</span>
+        <span class="author"><a href="#">Ziang Guo<sup>1</sup></a>,</span>
+        <span class="author">and <a href="#">Dzmitry Tsetserukou<sup>1</sup></a></span>
+    </div>
+    
+    <div class="affiliations">
+        <sup>1</sup>Skolkovo Institute of Science and Technology &nbsp;&nbsp;
+        <sup>2</sup>ITMO
+    </div>
+    
+    <div class="links">
+        <div class="link-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Paper">
+            <a href="https://arxiv.org/" target="_blank">Paper (arXiv)</a>
+        </div>
+        <div class="link-item">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Code">
+            <a href="https://github.com/" target="_blank">Code (coming soon)</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
